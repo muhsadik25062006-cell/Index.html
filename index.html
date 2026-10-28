@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Muhammad Sadit</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            background: #0b1020;
+            color: #e5e7eb;
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        .text-ungu {
+            color: #a78bfa;
+        }
+
+        .navbar {
+            background: #0b1020;
+        }
+
+        .navbar-brand {
+            color: #a78bfa;
+            font-weight: bold;
+        }
+
+        .navbar-brand:hover {
+            color: #c4b5fd;
+        }
+
+        .nav-link {
+            color: #d1d5db;
+        }
+
+        .nav-link:hover {
+            color: #38bdf8;
+        }
+
+        /* HERO */
+        .hero {
+            background: radial-gradient(
+                circle at 80% 30%,
+                #25204d,
+                #0b1020 70%
+            );
+            border-radius: 24px;
+            padding: 55px 30px;
+            margin-top: 30px;
+        }
+
+        .hero-label {
+            color: #38bdf8;
+            letter-spacing: 3px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .nama-gradient {
+            background: linear-gradient(90deg, #c4b5fd, #60a5fa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .foto-profil {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #a78bfa;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: #19213c;
+            border: 1px solid #343d59;
+            border-radius: 30px;
+            padding: 8px 16px;
+            font-size: 13px;
+            margin-top: 15px;
+        }
+
+        .status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #4ade80;
+            border-radius: 50%;
+            margin-right: 7px;
+        }
+
+        /* TOMBOL */
+        .btn-gradient {
+            background: linear-gradient(135deg, #a78bfa, #38bdf8);
+            color: #0b1020;
+            border: none;
+            font-weight: bold;
+            padding: 11px 22px;
+            border-radius: 10px;
+        }
+
+        .btn-gradient:hover {
+            color: #0b1020;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px #38bdf844;
+        }
+
+        .btn-outline-custom {
+            color: white;
+            border: 1px solid #514477;
+            border-radius: 10px;
+            padding: 11px 22px;
+        }
+
+        .btn-outline-custom:hover {
+            background: #a78bfa;
+            color: #0b1020;
+        }
+
+        /* BAGIAN KEAHLIAN */
+        .skill-badge {
+            display: inline-block;
+            background: #191f38;
+            color: #a78bfa;
+            border: 1px solid #514477;
+            border-radius: 30px;
+            padding: 8px 22px;
+            margin: 6px;
+            font-weight: bold;
+        }
+
+        .skill-badge:hover {
+            background: #a78bfa;
+            color: #0b1020;
+        }
+
+        /* KARTU PROYEK */
+        .project-card {
+            background: #151d32;
+            border: 1px solid #343d59;
+            border-radius: 18px;
+            padding: 25px;
+            height: 100%;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: #a78bfa;
+        }
+
+        .project-card h5 {
+            color: #a78bfa;
+        }
+
+        .text-muted-custom {
+            color: #b8c2d9;
+        }
+
+        /* TUJUAN */
+        .tujuan {
+            background: linear-gradient(135deg, #142d32, #151d32);
+            border: 1px solid #2dd4bf;
+            border-radius: 18px;
+            padding: 30px;
+        }
+
+        
+        .kontak {
+            max-width: 680px;
+            background: #151d32;
+            border: 1px solid #343d59;
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .form-control {
+            background: #0b1020;
+            color: white;
+            border: 1px solid #414b66;
+            padding: 12px;
+        }
+
+        .form-control:focus {
+            background: #0b1020;
+            color: white;
+            border-color: #a78bfa;
+            box-shadow: 0 0 0 3px #a78bfa22;
+        }
+
+        .form-control::placeholder {
+            color: #9ca3af;
+        }
+
+        .form-label {
+            color: #e5e7eb;
+        }
+
+        /* MODAL BOOTSTRAP */
+        .modal-content {
+            background: #151d32;
+            color: #e5e7eb;
+            border: 1px solid #a78bfa;
+            border-radius: 20px;
+        }
+
+        .modal-header {
+            border-bottom-color: #343d59;
+        }
+
+        .modal-footer {
+            border-top-color: #343d59;
+        }
+
+        .btn-close {
+            filter: invert(1);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #070b16;
+            color: #9ca3af;
+            border-top: 1px solid #343d59;
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 35px 18px;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .foto-profil {
+                width: 170px;
+                height: 170px;
+            }
+
+            .kontak {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#beranda">Sadit Portfolio</a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuNavbar"
+                aria-controls="menuNavbar"
+                aria-expanded="false"
+                aria-label="Buka navigasi">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuNavbar">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="#beranda">Beranda</a>
+                <a class="nav-link" href="#keahlian">Keahlian</a>
+                <a class="nav-link" href="#proyek">Proyek</a>
+                <a class="nav-link" href="#kontak">Kontak</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
+
+    <!-- HERO -->
+    <section class="hero" id="beranda">
+        <div class="row align-items-center g-4">
+
+            <div class="col-lg-7">
+                <p class="hero-label">PORTOFOLIO PRIBADI</p>
+
+                <h1 class="display-5 fw-bold mb-3">
+                    Halo, saya<br>
+                    <span class="nama-gradient">Muhammad Sadit</span>
+                </h1>
+
+                <h3 class="mb-3">Mahasiswa Informatika</h3>
+
+                <p class="text-muted-custom mb-4">
+                    Saya senang belajar coding dan membuat website
+                    yang menarik, kreatif, serta bermanfaat.
+                </p>
+
+                <a href="#proyek" class="btn btn-gradient me-2 mb-2">
+                    Lihat Proyek
+                </a>
+
+                <button class="btn btn-outline-custom mb-2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalProfil">
+                    Detail Profil
+                </button>
+            </div>
+
+            <div class="col-lg-5 text-center">
+                <img src="img/sadit.jpeg"
+                     alt="Foto Muhammad Sadit"
+                     class="foto-profil">
+
+                <div>
+                    <span class="status-badge">
+                        <span class="status-dot"></span>
+                        Mahasiswa Informatika
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- KEAHLIAN -->
+    <section class="text-center py-5 my-3" id="keahlian">
+        <h2 class="fw-bold mb-3">Keahlian Saya</h2>
+        <p class="text-muted-custom">
+            Teknologi yang sedang saya pelajari:
+        </p>
+
+        <div class="mt-3">
+            <span class="skill-badge">HTML</span>
+            <span class="skill-badge">CSS</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">Bootstrap 5</span>
+        </div>
+    </section>
+
+    <!-- PROYEK -->
+    <section class="py-4 mb-5" id="proyek">
+        <h2 class="fw-bold text-center mb-4">Proyek Saya</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <h5 class="fw-bold">Proyek 1</h5>
+                    <p class="text-muted-custom">
+                        Website portofolio pribadi menggunakan
+                        HTML, CSS, dan Bootstrap.
+                    </p>
+                    <button class="btn btn-gradient"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalProfil">
+                        Lihat Profil
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <h5 class="fw-bold">Proyek 2</h5>
+                    <p class="text-muted-custom">
+                        Desain halaman website yang menarik,
+                        modern, dan responsif.
+                    </p>
+                    <button class="btn btn-gradient"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalProfil">
+                        Lihat Profil
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <h5 class="fw-bold">Proyek 3</h5>
+                    <p class="text-muted-custom">
+                        Formulir kontak dengan validasi
+                        menggunakan JavaScript.
+                    </p>
+                    <button class="btn btn-gradient"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalProfil">
+                        Lihat Profil
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="tujuan text-center mb-5">
+        <h2 class="fw-bold mb-3" style="color:#5eead4">
+            Tujuan Saya
+        </h2>
+        <p class="mb-0">
+            Belajar dan mengembangkan kemampuan membuat website
+            yang kreatif, responsif, dan bermanfaat.
+        </p>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="kontak mx-auto mb-5" id="kontak">
+        <h2 class="fw-bold text-center mb-3">Hubungi Saya</h2>
+
+        <p class="text-center mb-4">
+            Email:
+            <a href="mailto:muh.sadik25062006@gmail.com">
+                muh.sadik25062006@gmail.com
+            </a>
+        </p>
+
+        <form id="formKontak" novalidate>
+
+            <div class="mb-3">
+                <label for="nama" class="form-label">
+                    Nama Lengkap
+                </label>
+                <input type="text"
+                       class="form-control"
+                       id="nama"
+                       placeholder="Masukkan nama kamu"
+                       minlength="2"
+                       required>
+                <div class="invalid-feedback">
+                    Nama harus minimal 2 karakter.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">
+                    Alamat Email
+                </label>
+                <input type="email"
+                       class="form-control"
+                       id="email"
+                       placeholder="contoh@email.com"
+                       required>
+                <div class="invalid-feedback">
+                    Masukkan alamat email yang valid.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="pesan" class="form-label">
+                    Pesan
+                </label>
+                <textarea class="form-control"
+                          id="pesan"
+                          rows="4"
+                          placeholder="Tuliskan pesan kamu"
+                          minlength="5"
+                          required></textarea>
+                <div class="invalid-feedback">
+                    Pesan harus minimal 5 karakter.
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-gradient w-100">
+                Kirim Pesan
+            </button>
+
+            <div id="hasilPesan"
+                 class="mt-3"
+                 role="status"
+                 aria-live="polite"></div>
+        </form>
+    </section>
+
+</main>
+
+<div class="modal fade" id="modalProfil" tabindex="-1"
+     aria-labelledby="judulModal" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title text-ungu fw-bold"
+                    id="judulModal">
+                    Detail Profil
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Tutup"></button>
+            </div>
+
+            <div class="modal-body">
+                <p><strong>Nama:</strong> Muhammad Sadit</p>
+                <p><strong>Status:</strong> Adalahah pokonya </p>
+                <p><strong>Jurusan:</strong> Informatika</p>
+                <p><strong>Tentang Saya:</strong> Kepo yahh</p>
+                <p><strong>Keahlian:</strong> Banyak </p>
+                <p><strong>Hobi:</strong> Ngoding</p>
+                <p>
+                    <strong>Tujuan:</strong>
+                    Belajar dan mengembangkan kemampuan membuat website.
+                </p>
+                <p class="mb-0">
+                    <strong>Email:</strong>
+                    <a href="mailto:muh.sadik25062006@gmail.com">
+                        muh.sadik25062006@gmail.com
+                    </a>
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button"
+                        class="btn btn-gradient"
+                        data-bs-dismiss="modal">
+                    Tutup
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer class="text-center py-4">
+    <p class="mb-0">
+        &copy; 2026 Muhammad Sadit.
+        Dibuat dengan HTML, CSS, Bootstrap, dan JavaScript.
+    </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    const formKontak = document.getElementById("formKontak");
+    const hasilPesan = document.getElementById("hasilPesan");
+
+    formKontak.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const nama = document.getElementById("nama");
+        const email = document.getElementById("email");
+        const pesan = document.getElementById("pesan");
+
+        nama.value = nama.value.trim();
+        email.value = email.value.trim();
+        pesan.value = pesan.value.trim();
+
+        if (!formKontak.checkValidity()) {
+            formKontak.classList.add("was-validated");
+            hasilPesan.textContent =
+                "Periksa kembali data yang kamu masukkan.";
+            hasilPesan.style.color = "#f87171";
+            return;
+        }
+
+        hasilPesan.textContent =
+            "Terima kasih, " + nama.value +
+            "! Formulir berhasil divalidasi.";
+
+        hasilPesan.style.color = "#4ade80";
+
+        formKontak.reset();
+        formKontak.classList.remove("was-validated");
+    });
+</script>
+
+</body>
+</html>
